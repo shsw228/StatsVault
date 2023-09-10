@@ -35,7 +35,6 @@ extension ViewController {
         navigationItem.title = "ゲーム一覧"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .automatic
-
     }
     private func setSettingButton() {
         // 右にアイコン表示

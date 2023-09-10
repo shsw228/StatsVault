@@ -21,8 +21,8 @@ struct AppSettingView: View {
                 .navigationTitle("設定")
                 .navigationBarTitleDisplayMode(.automatic)
             }
-
         }
+        .dynamicTypeSize(...DynamicTypeSize.xxLarge)
     }
 }
 struct CellView: View {
@@ -35,7 +35,7 @@ struct CellView: View {
 }
 struct AboutDeveloperView: View {
     @Environment(\.openURL) var openUrl
-
+    
     var body: some View {
         Section() {
             Button {
@@ -80,7 +80,7 @@ struct RevisionView: View {
         } header: {
             Text("Revision")
         }
-
+        
     }
 }
 struct LicencesView: View {
@@ -113,15 +113,14 @@ struct AppInfoView: View {
                 .fontWeight(.regular)
                 .frame(maxWidth: .infinity,
                        alignment: .center)
-
+            
         }
-
+        
     }
 }
 struct AppSettingView_Previews: PreviewProvider {
     static var previews: some View {
         AppSettingView()
-            .dynamicTypeSize(.large)
     }
 }
 
@@ -132,6 +131,6 @@ struct AppInfoList_Previews: PreviewProvider {
             RevisionView()
             LicencesView()
         }
-
+        
     }
 }
