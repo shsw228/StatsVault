@@ -15,6 +15,9 @@
 		B7C9025B2AAB73410009A021 /* StatsVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C9025A2AAB73410009A021 /* StatsVaultTests.swift */; };
 		B7C902652AAB73410009A021 /* StatsVaultUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C902642AAB73410009A021 /* StatsVaultUITests.swift */; };
 		B7C902672AAB73410009A021 /* StatsVaultUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C902662AAB73410009A021 /* StatsVaultUITestsLaunchTests.swift */; };
+		B7C902782AADD4C10009A021 /* AppSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C902772AADD4C10009A021 /* AppSettingView.swift */; };
+		B7C9027B2AADF4A80009A021 /* Milepost in Frameworks */ = {isa = PBXBuildFile; productRef = B7C9027A2AADF4A80009A021 /* Milepost */; };
+		B7C902812AADFAC20009A021 /* LicenseList in Frameworks */ = {isa = PBXBuildFile; productRef = B7C902802AADFAC20009A021 /* LicenseList */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 		B7C902602AAB73410009A021 /* StatsVaultUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatsVaultUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C902642AAB73410009A021 /* StatsVaultUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVaultUITests.swift; sourceTree = "<group>"; };
 		B7C902662AAB73410009A021 /* StatsVaultUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVaultUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7C902772AADD4C10009A021 /* AppSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7C902812AADFAC20009A021 /* LicenseList in Frameworks */,
+				B7C9027B2AADF4A80009A021 /* Milepost in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				B7C902472AAB73410009A021 /* ViewController.swift */,
+				B7C902772AADD4C10009A021 /* AppSettingView.swift */,
+				B7C9028E2AADFEF00009A021 /* Setting */,
 				B7C9024E2AAB73410009A021 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -156,6 +164,13 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		B7C9028E2AADFEF00009A021 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,8 +185,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				B7C9028B2AADFDB00009A021 /* PBXTargetDependency */,
+				B7C9027D2AADF4BF0009A021 /* PBXTargetDependency */,
 			);
 			name = StatsVault;
+			packageProductDependencies = (
+				B7C9027A2AADF4A80009A021 /* Milepost */,
+				B7C902802AADFAC20009A021 /* LicenseList */,
+			);
 			productName = StatsVault;
 			productReference = B7C902402AAB73410009A021 /* StatsVault.app */;
 			productType = "com.apple.product-type.application";
@@ -244,6 +265,10 @@
 				Base,
 			);
 			mainGroup = B7C902372AAB73410009A021;
+			packageReferences = (
+				B7C902792AADF4A80009A021 /* XCRemoteSwiftPackageReference "Milepost" */,
+				B7C9027F2AADFAC20009A021 /* XCRemoteSwiftPackageReference "LicenseList" */,
+			);
 			productRefGroup = B7C902412AAB73410009A021 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,6 +314,7 @@
 				B7C902482AAB73410009A021 /* ViewController.swift in Sources */,
 				B7C902442AAB73410009A021 /* AppDelegate.swift in Sources */,
 				B7C902462AAB73410009A021 /* SceneDelegate.swift in Sources */,
+				B7C902782AADD4C10009A021 /* AppSettingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +347,14 @@
 			isa = PBXTargetDependency;
 			target = B7C9023F2AAB73410009A021 /* StatsVault */;
 			targetProxy = B7C902612AAB73410009A021 /* PBXContainerItemProxy */;
+		};
+		B7C9027D2AADF4BF0009A021 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B7C9027C2AADF4BF0009A021 /* PrepareMilepost */;
+		};
+		B7C9028B2AADFDB00009A021 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B7C9028A2AADFDB00009A021 /* PrepareLicenseList */;
 		};
 /* End PBXTargetDependency section */
 
@@ -628,6 +662,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7C902792AADF4A80009A021 /* XCRemoteSwiftPackageReference "Milepost" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/giginet/Milepost";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		B7C9027F2AADFAC20009A021 /* XCRemoteSwiftPackageReference "LicenseList" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cybozu/LicenseList.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7C9027A2AADF4A80009A021 /* Milepost */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7C902792AADF4A80009A021 /* XCRemoteSwiftPackageReference "Milepost" */;
+			productName = Milepost;
+		};
+		B7C9027C2AADF4BF0009A021 /* PrepareMilepost */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7C902792AADF4A80009A021 /* XCRemoteSwiftPackageReference "Milepost" */;
+			productName = "plugin:PrepareMilepost";
+		};
+		B7C902802AADFAC20009A021 /* LicenseList */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7C9027F2AADFAC20009A021 /* XCRemoteSwiftPackageReference "LicenseList" */;
+			productName = LicenseList;
+		};
+		B7C9028A2AADFDB00009A021 /* PrepareLicenseList */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7C9027F2AADFAC20009A021 /* XCRemoteSwiftPackageReference "LicenseList" */;
+			productName = "plugin:PrepareLicenseList";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7C902382AAB73410009A021 /* Project object */;
 }

@@ -7,6 +7,7 @@
 
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
     private var collectionView:UICollectionView! = nil
@@ -39,8 +40,16 @@ extension ViewController {
     private func setSettingButton() {
         // 右にアイコン表示
         // TODO: アプリ設定画面実装
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: #selector(tapSettingButton))
     }
+
+    @objc
+    private func tapSettingButton() {
+        let vc = UIHostingController(rootView: AppSettingView())
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
+    }
+
     private func setBackgroundColor() {
         self.view.backgroundColor = .systemBackground
     }
