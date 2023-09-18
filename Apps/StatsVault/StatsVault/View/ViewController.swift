@@ -32,7 +32,7 @@ extension ViewController {
     private func setTitleView() {
         // TODO: リソース切り出し
         // タイトル設定
-        navigationItem.title = "ゲーム一覧"
+        navigationItem.title = Resources.GameList.title
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .automatic
     }
@@ -44,7 +44,7 @@ extension ViewController {
 
     @objc
     private func tapSettingButton() {
-        let vc = UIHostingController(rootView: AppSettingView())
+        let vc = UIHostingController(rootView: AppSettingRootView())
         vc.modalPresentationStyle = .formSheet
         self.present(vc, animated: true)
     }
